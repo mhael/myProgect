@@ -1,0 +1,10 @@
+<%= simple_form_for(@user) do |f| %>
+  <div class="inputs">
+    <%= f.input :username, :disabled => true, :label => "Имя пользователя"%>
+    <%= f.input :email, :label => "Адрес электронной почты"%>
+    <%= f.association :roles, :as => :check_boxes %>
+    <%= f.association :licences%>
+  </div>
+  <p><%= f.submit "Edit", :align => "left"%></p>
+<% end %>
+

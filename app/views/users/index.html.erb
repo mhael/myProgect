@@ -1,0 +1,22 @@
+<h1>Listing Users</h1>
+
+
+<% @users.each do |user| %>
+<div>
+  <%= user.link %>
+  <%= user.username %>
+  <%= user.email %>
+  <%= user.created_at %>
+  <%= user.updated_at %>
+  <%= user.roles %>
+
+
+  <%= link_to 'Show', user %>
+  <%= link_to 'Edit', edit_user_path(user) %>
+  <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
+ <div>
+<% end %>
+
+
+<br />
+

@@ -1,0 +1,13 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="inputs">
+    <%= render "#{resource.current_step}_step", :f => f %>
+    <p><%= f.submit "Continue" %></p>
+    <p><%= f.submit "Back", :name => "back_button" unless resource.first_step? %></p>
+  </div>
+<% end %>
+
+<%= render :partial => "devise/shared/links" %>
+

@@ -1,0 +1,39 @@
+<div>
+<table>
+  <tr>
+    <th>Имя пользователя</th>
+    <th>E-mail</th>
+    <th>Создан</th>
+    <th>Обновлен</th>
+    <th>Права доступа</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<tr>
+<td>
+   <%= @user.username %>
+</td>
+<td>
+   <%= @user.email %>
+</td>
+<td>
+   <%= @user.created_at.to_date %>
+</td>
+<td>
+   <%= @user.updated_at.to_date %>
+</td>
+<td>
+   <% @user.roles.each do |role| %>
+    <%= role.name + " "%>
+   <% end %>
+</td>
+
+  <td><%= link_to 'Show', @user %></td>
+  <td><%= link_to 'Edit', edit_user_path(@user) %></td>
+  <td><%= link_to 'Destroy', @user, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+</table>
+</div>
+

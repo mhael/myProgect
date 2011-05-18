@@ -1,0 +1,23 @@
+<%= javascript_include_tag :ckeditor %>
+
+<% form_for(@post) do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label 'Заголовок' %>
+      </td>
+      <td>
+        <%= f.text_field :title, :size => '100'%>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        <%= f.label 'Содержание' %>
+      </td>
+      <td>
+        <%= f.cktext_area :content, :toolbar => 'Basic' %>
+      </td>     
+    </tr>
+  </table>
+  <%= submit_tag "Создать"  %>
+<% end %>

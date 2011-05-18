@@ -1,0 +1,1 @@
+$("iframe").contents().find("#container").html("<div id=\"content\"> <%= escape_javascript(render "post_show", :post => @post )%> <\/div>");

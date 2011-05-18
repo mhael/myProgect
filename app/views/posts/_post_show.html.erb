@@ -1,0 +1,22 @@
+<%= javascript_include_tag 'showable' if params[:action]=='index' %>
+<%= div_for (post) do %>
+  <span class="post_title">
+    <%#=  link_to_if(params[:action] == "index", post.title,  post_path(post, :format => :js), :class =>"iframe" ) %>
+    <%=  link_to_if(params[:action] == "index", post.title,  post, :class =>"iframe" ) %>
+  </span>
+  <div class = "post_info">
+    <%= "Добавлено: #{post.created_at}"%>
+    <strong>
+      <% link_to "#{post.user.username}", post.user %>
+    </strong>
+  </div>
+  <div class="post_content">
+    <%= raw  post.content%>
+  </div>
+  <% if can? :update, post %>
+    <%= link_to 'Edit', edit_post_path(post) %> |
+  <%end%>
+  <% if can? :destroy, post %>
+    <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+  <%end%>
+<% end  %>

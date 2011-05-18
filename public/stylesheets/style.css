@@ -1,0 +1,107 @@
+body
+{
+    background-color: #666;
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#container{
+    margin:0 auto;
+    text-align:left;
+    min-width: 650px;
+    width: expression((document.compatMode && document.compatMode == 'CSS1Compat') ? (document.documentElement.clientWidth < 650 ? "650px" : "auto") : (document.body.clientWidth < 650 ? "650px" : "auto"));
+}
+
+#header
+{
+    margin-right: 150px;
+    margin-left: 150px;
+}
+
+#content
+{
+    background: none repeat scroll 0 0 #EAD4AF;
+    border: 10px solid #B34700;
+    padding: 10px 10px 20px 10px;
+    margin-right: 150px;
+    margin-left: 150px;
+
+}
+
+.post
+{
+    border: 2px solid #B34700;
+    color: #4B2915;
+    padding: 10px 10px 20px 10px;
+    margin-bottom: 10px;
+    -moz-border-radius: 15px;
+}
+.post_content
+{
+}
+.post-content:nth-child(2n+1) { background-color: gold}
+.post_title {
+    font-size: 20px;
+}
+
+#content a
+{
+color: #007D48;
+text-decoration: none;
+}
+
+.post a:hover
+{
+text-decoration: underline;
+}
+
+ul.hmenu li {
+    color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+ul.hmenu li a {
+    color: #000;
+    display: inline;
+}
+
+ul.links li {
+    color: #000;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+ul.links li a {
+    color: #000;
+    display: inline;
+}
+
+.simple_form label {
+    float: left;
+    width: 200px;
+    text-align: left;
+    margin: 0;
+}
+
+.simple_form div.input {
+    margin-bottom: 10px;
+
+
+    .simple_form div.boolean, .simple_form input[type='submit'] {
+    margin-left: 120px;
+}
+
+.simple_form div.boolean label {
+    float: none;
+    margin: 0;
+}
+
+.simple_form span {
+    display: block;
+}
+
